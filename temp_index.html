@@ -1,0 +1,513 @@
+<header class="loginBar">
+    <div class="oh">
+        <span class="fontWhite fl">欢迎光临聚客邦</span>
+            <span class="fr">
+                <span class="fontWhite">商家登录</span>
+                <span class="fontBlue marginL30">合作商登录</span>
+            </span>
+    </div>
+</header>
+<div class="main_tabs">
+    <div class="oh">
+        <img src="img/JKB.png" alt="" class="fl">
+        <ul class="ulInline fr">
+            <li class="active">
+                    <span class="face">
+                       <span>首页</span>
+                    </span>
+                <span class="text_mask">首页</span>
+                <div class="bottom_ine">
+                    <div></div>
+                </div>
+            </li>
+            <li>
+                    <span class="face">
+                        <span>产品中心</span>
+                    </span>
+                <span class="text_mask">产品中心</span>
+                <div class="bottom_ine">
+                    <div></div>
+                </div>
+            </li>
+            <li>
+                    <span class="face">
+                        <span>合作客户</span>
+                    </span>
+                <span class="text_mask">合作客户</span>
+                <div class="bottom_ine">
+                    <div></div>
+                </div>
+            </li>
+            <li>
+                    <span class="face">
+                        <span>服务支持</span>
+                    </span>
+                <span class="text_mask">服务支持</span>
+                <div class="bottom_ine">
+                    <div></div>
+                </div>
+            </li>
+            <li>
+                    <span class="face">
+                        <span>关于我们</span>
+                    </span>
+                <span class="text_mask">关于我们</span>
+                <div class="bottom_ine">
+                    <div></div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<ion-view>
+    <ion-content
+            scrollbar-y="false"
+            scrollbar-x="false"
+            delegate-handle="mainScroll"
+            scroll="false"
+            on-scroll="listenScroll()"
+    >
+        <!--第一部分开始-->
+        <div id="part1" class="part_one">
+            <!--头部登录条start-->
+            <div style="height: 110px"></div>
+            <!--头部登录条end-->
+            <!--页面切换条,含Logo开始-->
+            <!--页面切换条,含Logo结束-->
+            <!--视频部分开始-->
+            <div class="videoPart pr">
+                <video src="video/lrkjvideo.mp4" id="adMp4" poster="img/poster.jpg">
+                    您的浏览器不支持视频播放
+                </video>
+                <div class="video_mask">
+                    <img src="img/bannerText.png" alt="">
+                    <img src="img/playBtn.png" ng-click="playAd()"
+                         class="cursor " alt="" id="playBtn">
+                </div>
+                <div class="video_poster">
+                    <img src="img/poster.jpg" alt="">
+                </div>
+            </div>
+            <!--视频部分结束-->
+            <div class="bottomWitheBar"></div>
+            <img src="img/mouseTip.gif" alt="" id="mouseTip">
+        </div>
+        <!--第一部分结束-->
+
+        <!--第二部分开始-->
+        <div id="part2" class="part_two">
+            <div class="container">
+                <div class="fontBlue textCenter">为什么客户需要我们?</div>
+                <div class="textCenter">
+                    JKB(聚客邦)重庆零日科技有限公司专注于企业级服务,为商户提供一站式支付解决方案,以及互联网营销等额外金融类第三方服务<br>
+                    在这个注重分享的互联网时代,只有成就别人,才能成就自己。我们的目的就是让生意更专业,让商业更简单。
+                </div>
+                <table>
+                    <tr>
+                        <td>
+                            <img src="img/part_two_1.png" alt="">
+                            <div class="title">聚客邦支付平台</div>
+                            <div class="txt">
+                                聚客邦银联,微信,支付宝等所有主流支付方式,帮你记录分析所有的交易数据和财务信息
+                            </div>
+                        </td>
+                        <td>
+                            <img src="img/part_two_2.png" alt="">
+                            <div class="title">拥有更庞大的消费人群</div>
+                            <div class="txt">
+                                全面覆盖90%以上的移动支付消费者,满足消费者的多种支付需求
+                            </div>
+                        </td>
+                        <td>
+                            <img src="img/part_two_3.png" alt="">
+                            <div class="title">互联网营销</div>
+                            <div class="txt">
+                                互联网营销平台全面覆盖各商业领域的营销开发需求,让你的每一个用户都有二次消费的冲动
+                            </div>
+                        </td>
+                        <td>
+                            <img src="img/part_two_4.png" alt="">
+                            <div class="title">与消费者零距离接触</div>
+                            <div class="txt">
+                                聚客邦准确的营销支持,收款产品与服务平台的完美结合,提供了 全方位的营销能力
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <!--第二部分结束-->
+
+        <!--第三部分开始-->
+        <div id="part3" class="part_three">
+            <div class="container">
+                <header class="fontBlue">
+                    <b>聚客邦</b>平台
+                </header>
+                <div class="txtOne">
+                    聚客邦、支付宝、微信等多种主流支付方式，为商户提供一站 <br>
+                    式支付解决方案
+                </div>
+                <div class="txtTwo">
+                    一次对接、一个账单、一个平台解决所有支付问题
+                </div>
+                <div class="baseBtn pr">
+                    <div class="pa">
+                        <span>点击进入</span>
+                    </div>
+                    <div class="pa">点击进入</div>
+                </div>
+            </div>
+            <div class="juchi">
+                <img src="img/juchi.png" alt="">
+            </div>
+            <ul class="scrollbox ulInline">
+                <li style="top: 410px;left: 830px;" class="active">
+                    <div class="p1">
+                        <img src="img/p3_wihte_1.png" alt="">
+                        <div class="textCenter">
+                            30分钟 <br>
+                            快速审核
+                        </div>
+                    </div>
+                    <div class="sl"></div>
+                    <div class="sr"></div>
+                    <div class="p2"></div>
+                </li>
+                <li style="top: 248px;left: 1002px;">
+                    <div class="p1">
+                        <img src="img/p3_2.png" alt="">
+                        <div class="textCenter">
+                            7*24小时 <br>
+                            在线技术支持
+                        </div>
+                    </div>
+                    <div class="sl"></div>
+                    <div class="sr"></div>
+                    <div class="p2"></div>
+                </li>
+                <li style="top: 86px;left:1174px;">
+                    <div class="p1">
+                        <img src="img/p3_3.png" alt="">
+                        <div class="textCenter">
+                            支持多种 <br>
+                            支付渠道
+                        </div>
+                    </div>
+                    <div class="sl"></div>
+                    <div class="sr"></div>
+                    <div class="p2"></div>
+                </li>
+                <li style="top: 410px;left:1174px;">
+                    <div class="p1">
+                        <img src="img/p3_4.png" alt="">
+                        <div class="textCenter">
+                            自定义 <br>
+                            支付界面
+                        </div>
+                    </div>
+                    <div class="sl"></div>
+                    <div class="sr"></div>
+                    <div class="p2"></div>
+                </li>
+                <li style="top: 248px;left: 1346px;">
+                    <div class="p1">
+                        <img src="img/p3_5.png" alt="">
+                        <div class="textCenter">
+                            聚合报表 <br>
+                            全渠道对账
+                        </div>
+                    </div>
+                    <div class="sl"></div>
+                    <div class="sr"></div>
+                    <div class="p2"></div>
+                </li>
+                <li style="top: 86px;left: 1518px;">
+                    <div class="p1">
+                        <img src="img/p3_6.png" alt="">
+                        <div class="textCenter">
+                            同时支持 <br>
+                            企业和个人开发者
+                        </div>
+                    </div>
+                    <div class="sl"></div>
+                    <div class="sr"></div>
+                    <div class="p2"></div>
+                </li>
+                <li style="top: 248px;left: 1690px;">
+                    <div class="p1">
+                        <img src="img/p3_7.png" alt="">
+                        <div class="textCenter">
+                            开通免费 <br>
+                        </div>
+                    </div>
+                    <div class="sl"></div>
+                    <div class="sr"></div>
+                    <div class="p2" data-ng-init="bindHover()"></div>
+                </li>
+            </ul>
+        </div>
+        <!--第三部分结束-->
+
+        <!--第四部分开始-->
+        <div id="part4" class="part_four">
+            <img style="left: 110px;top: 20vh"
+                 src="img/left/zuo1.png" alt="" class="san san_l">
+            <img style="left: 230px;top:30vh"
+                 src="img/left/zuo2.png" alt="" class="san san_l">
+            <img style="left: 230px;bottom:30vh"
+                 src="img/left/zuo3.png" alt="" class="san san_l">
+            <img style="left: 110px;bottom: 20vh"
+                 src="img/left/zuo4.png" alt="" class="san san_l">
+            <img style="left: 0"
+                 src="img/left/da.png" alt="" class="san san_l-d">
+            <img style="right: 110px;top: 20vh"
+                 src="img/right/you1.png" alt="" class="san san_r">
+            <img style="right: 230px;top:30vh"
+                 src="img/right/you2.png" alt="" class="san san_r">
+            <img style="right: 230px;bottom:30vh"
+                 src="img/right/you3.png" alt="" class="san san_r">
+            <img style="right: 110px;bottom: 20vh"
+                 src="img/right/you4.png" alt="" class="san san_r">
+            <img style="right: 0"
+                 src="img/right/da.png" alt="" class="san san_r-d">
+            <div class="simgContainer">
+                <img src="img/simg1.jpg" alt="" class="simg1">
+                <img src="img/simg2.jpg" alt="" class="simg2">
+                <img src="img/simg3.jpg" alt="" class="simg3" data-ng-init="imgHover()">
+            </div>
+        </div>
+        <!--第四部分结束-->
+
+        <!--第五部分开始-->
+        <div id="part5" class="part_five">
+            <div class="tralslateYContainer">
+                <div id="imgBody"></div>
+                <div class="layer_1"></div>
+                <div class="layer_2"></div>
+            </div>
+            <div class="fr">
+                <div>
+                    <b>聚客邦</b>平台
+                </div>
+                <div>
+                    专注为中小型企业提供供应链融资
+                </div>
+                <div>
+                    一次签约、一个账户、一个平台、一个申请解决所有资金问题
+                </div>
+                <div class="baseBtn pr">
+                    <div class="pa">
+                        <span>点击进入</span>
+                    </div>
+                    <div class="pa">点击进入</div>
+                </div>
+            </div>
+        </div>
+        <!--第五部分结束-->
+
+        <!--第六部分开始-->
+        <div id="part6" class="part_six">
+            <div class=" fontBlue fontSize35 textCenter">现在与谁合作?
+            </div>
+            <table class="panter" cellspacing="5px">
+                <tbody>
+                <tr>
+                    <td>
+                        <div class="imgBody" style="background: url('img/panter/1_spec_03.jpg')" src="" alt="">
+                        </div>
+                        <div class="L"></div>
+                        <div class="T"></div>
+                        <div class="R"></div>
+                        <div class="B"></div>
+                    </td>
+                    <td>
+                        <div class="imgBody" style="background: url('img/panter/1_spec_05.jpg')" src="" alt="">
+                        </div>
+                        <div class="L"></div>
+                        <div class="T"></div>
+                        <div class="R"></div>
+                        <div class="B"></div>
+                    </td>
+                    <td>
+                        <div class="imgBody" style="background: url('img/panter/1_spec_07.jpg')" src="" alt="">
+                        </div>
+                        <div class="L"></div>
+                        <div class="T"></div>
+                        <div class="R"></div>
+                        <div class="B"></div>
+                    </td>
+                    <td>
+                        <div class="imgBody" style="background: url('img/panter/1_spec_09.jpg')" src="" alt="">
+                        </div>
+                        <div class="L"></div>
+                        <div class="T"></div>
+                        <div class="R"></div>
+                        <div class="B"></div>
+                    </td>
+                    <td>
+                        <div class="imgBody" style="background: url('img/panter/1_spec_03.jpg')" src="" alt="">
+                        </div>
+                        <div class="L"></div>
+                        <div class="T"></div>
+                        <div class="R"></div>
+                        <div class="B"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="imgBody" style="background: url('img/panter/1_spec_03.jpg')" src="" alt="">
+                        </div>
+                        <div class="L"></div>
+                        <div class="T"></div>
+                        <div class="R"></div>
+                        <div class="B"></div>
+                    </td>
+                    <td>
+                        <div class="imgBody" style="background: url('img/panter/1_spec_05.jpg')" src="" alt="">
+                        </div>
+                        <div class="L"></div>
+                        <div class="T"></div>
+                        <div class="R"></div>
+                        <div class="B"></div>
+                    </td>
+                    <td>
+                        <div class="imgBody" style="background: url('img/panter/1_spec_07.jpg')" src="" alt="">
+                        </div>
+                        <div class="L"></div>
+                        <div class="T"></div>
+                        <div class="R"></div>
+                        <div class="B"></div>
+                    </td>
+                    <td>
+                        <div class="imgBody" style="background: url('img/panter/1_spec_09.jpg')" src="" alt="">
+                        </div>
+                        <div class="L"></div>
+                        <div class="T"></div>
+                        <div class="R"></div>
+                        <div class="B"></div>
+                    </td>
+                    <td>
+                        <div class="imgBody" style="background: url('img/panter/1_spec_03.jpg')" src="" alt="">
+                        </div>
+                        <div class="L"></div>
+                        <div class="T"></div>
+                        <div class="R"></div>
+                        <div class="B"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="imgBody" style="background: url('img/panter/1_spec_03.jpg')" src="" alt="">
+                        </div>
+                        <div class="L"></div>
+                        <div class="T"></div>
+                        <div class="R"></div>
+                        <div class="B"></div>
+                    </td>
+                    <td>
+                        <div class="imgBody" style="background: url('img/panter/1_spec_05.jpg')" src="" alt="">
+                        </div>
+                        <div class="L"></div>
+                        <div class="T"></div>
+                        <div class="R"></div>
+                        <div class="B"></div>
+                    </td>
+                    <td>
+                        <div class="imgBody" style="background: url('img/panter/1_spec_07.jpg')" src="" alt="">
+                        </div>
+                        <div class="L"></div>
+                        <div class="T"></div>
+                        <div class="R"></div>
+                        <div class="B"></div>
+                    </td>
+                    <td>
+                        <div class="imgBody" style="background: url('img/panter/1_spec_09.jpg')" src="" alt="">
+                        </div>
+                        <div class="L"></div>
+                        <div class="T"></div>
+                        <div class="R"></div>
+                        <div class="B"></div>
+                    </td>
+                    <td>
+                        <div class="imgBody" style="background: url('img/panter/1_spec_03.jpg')" src="" alt="">
+                        </div>
+                        <div class="L"></div>
+                        <div class="T"></div>
+                        <div class="R"></div>
+                        <div class="B"></div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <!--第六部分结束-->
+
+        <!--第七部分开始-->
+        <div id="part7" class="part_seven">
+            <div style="height: 110px;background: #fff"></div>
+            <div class="jionus">
+                <img src="img/jionus.png" alt="">
+                <h1 class="fontWhite">现在加入我们的团队</h1>
+                <div class="jionBtn cursor">加入我们</div>
+            </div>
+            <table>
+                <tr>
+                    <td>关于聚客邦支付</td>
+                    <td>聚客邦(重庆)零日科技有限公司</td>
+                </tr>
+                <tr>
+                    <td>公司介绍</td>
+                    <td>邮箱:jukebang.net</td>
+                </tr>
+                <tr>
+                    <td>加入我们</td>
+                    <td>电话:023-88597669</td>
+                </tr>
+                <tr>
+                    <td>分公司</td>
+                    <td>地址:重庆市渝中区龙湖时代天街B馆3号楼22-3</td>
+                </tr>
+                <tr>
+                    <td>公告</td>
+                    <td>ＨＥＬＬＯ　ＷＯＲＤ</td>
+                </tr>
+            </table>
+            <footer class="textCenter">
+                <div>
+                    <span>诚征英才</span> |
+                    <span>联系我们</span> |
+                    <span>International  Business</span>
+                </div>
+                <div>
+                    零日科技(重庆)有限公司版权所有 2016 ICP证:渝ICP备 13005934号-107
+                </div>
+            </footer>
+        </div>
+        <!--第七部分结束-->
+    </ion-content>
+</ion-view>
+
+<ul class="navList " data-ng-init="bindSc()">
+    <li class="active" ng-click="goHash(1)">
+        <span>提示1</span>
+    </li>
+    <li ng-click="goHash(2)">
+        <span>提示2</span>
+    </li>
+    <li ng-click="goHash(3)">
+        <span>提示3</span>
+    </li>
+    <li ng-click="goHash(4)">
+        <span>提示4</span>
+    </li>
+    <li ng-click="goHash(5)">
+        <span>提示5</span>
+    </li>
+    <li ng-click="goHash(6)">
+        <span>提示6</span>
+    </li>
+    <li ng-click="goHash(7)">
+        <span>提示7</span>
+    </li>
+</ul>

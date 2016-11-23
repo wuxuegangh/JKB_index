@@ -1,0 +1,707 @@
+@baseColor: #00AAEE;
+//头部登录条start
+body {
+  font-family: '微软雅黑' !important;
+  color: #8d8d8d;
+}
+
+html, body, .scroll {
+  height: 100%;
+}
+
+.part_one, .part_two, .part_three, .part_four, .part_five, .part_six, .part_seven {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+//第一部分开始
+.part_one {
+  //底部白条
+  .bottomWitheBar {
+    position: absolute;
+    z-index: 4;
+    bottom: 0;
+    background-color: #fff;
+    width: 100%;
+    height: 40px;
+  }
+}
+
+header.loginBar {
+  height: 30px;
+  line-height: 30px;
+  background-color: #1E1C29;
+  font-size: 12px;
+  position: fixed;
+  width: 100%;
+  z-index:10;
+  top: 0;
+  left: 0;
+  > div.oh {
+    max-width: 1400px;
+    min-width: 800px;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 auto;
+  }
+}
+
+//头部登录条start
+//页面切换条,含Logo开始
+.main_tabs {
+  position: fixed;
+  width: 100%;
+  top:30px;
+  left: 0;
+  height: 80px;
+  line-height: 80px;
+  z-index: 10;
+  background-color: rgba(204, 202, 202, 0.3);;
+  > div.oh {
+    max-width: 1450px;
+    min-width: 850px;
+    height: 80px;
+    line-height: 80px;
+    margin: 0 auto;
+    img.fl {
+      display: inline-block;
+      margin-top: 40px;
+      transform: translateY(-50%);
+      margin-left: 25px;
+    }
+    .ulInline {
+      height: 80px;
+      li {
+        cursor: pointer;
+        width: 100px;
+        height: 80px;
+        position: relative;
+        text-align: center;
+        span {
+          font-size: 18px;
+          letter-spacing: 1px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100px;
+          height: 80px;
+          line-height: 80px;
+        }
+        span.face {
+          z-index: 2;
+          overflow: hidden;
+          height: 50px;
+          transition: all 1s;
+          > span {
+            position: absolute;
+            width: 100px;
+            text-align: center;
+            top: 50px;
+            transform: translateY(-61%);
+          }
+        }
+        span.text_mask {
+          z-index: 1;
+          color: #fff;
+          transition: color 1s;
+        }
+        div.bottom_ine {
+          position: absolute;
+          bottom: 16px;
+          width: 100%;
+          height: 2px;
+          > div {
+            width: 0;
+            height: 2px;
+            background-color: #00AAEE;
+            border-radius: 1px;
+            margin: 0 auto;
+            transition: all 1s;
+          }
+        }
+      }
+      li.active {
+        span.face {
+          height: 0;
+        }
+        span.text_mask {
+          color: @baseColor;
+        }
+        div.bottom_ine {
+          > div {
+            width: 100px;
+          }
+        }
+      }
+      li:hover {
+        span.face {
+          height: 0;
+        }
+        span.text_mask {
+          color: @baseColor;
+        }
+        div.bottom_ine {
+          > div {
+            width: 100px;
+          }
+        }
+      }
+    }
+  }
+}
+
+//页面切换条,含Logo结束
+
+//视频部分开始
+.videoPart {
+  video {
+    width: 100%;
+    height: e('calc(100% - 150px )');
+  }
+
+  //视频遮罩层
+  .video_mask {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 120vh;
+    top: 0;
+    z-index: 3;
+    img:first-child {
+      margin-top: 20vh;
+      max-width: 50%;
+    }
+    #playBtn {
+      display: inline;
+      position: relative;
+      top: -16vh;
+      left: -21px;
+    }
+  }
+  //海报
+  .video_poster{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 120vh;
+    z-index: 2;
+    img{
+      max-height: 100%;
+    }
+  }
+}
+
+//视频部分结束
+//第一部分结束
+
+//提示鼠标GIf
+#mouseTip {
+  position: absolute;
+  left: 50%;
+  margin-left: -10px;
+  bottom: 60px;
+  z-index: 3;
+  max-width: 30px;
+}
+
+//导航列表
+.navList {
+  position: fixed;
+  margin-left: 50%;
+  bottom: 42px;
+  z-index: 6;
+  width: 500px;
+  height: 42px;
+  cursor: pointer;
+  right: 10px;
+  li {
+    float: left;
+    border: 1px solid #c7c7c6;
+    margin-left: 50px;
+    transform: rotateZ(45deg);
+    position: relative;
+    span {
+      position: absolute;
+      top: -30px;
+      background-color: #e4e5e7;
+      transform: rotateZ(-45deg);
+      width: 75px;
+      text-align: center;
+      border-radius: 5px;
+      opacity: 0;
+      transition: all 0.5s;
+      left: -52px;
+    }
+  }
+  li.active {
+    background-color: #00AAEE;
+    border: 1px solid #00AAEE;
+
+  }
+  li:hover {
+    border: 1px solid #00AAEE;
+    span {
+      opacity: 1;
+    }
+  }
+  li:nth-child(even) {
+    width: 12px;
+    height: 12px;
+    margin-top: 15px;
+  }
+  li:nth-child(odd) {
+    width: 20px;
+    height: 20px;
+    margin-top: 10px;
+  }
+}
+
+//第二部分开始
+.part_two {
+  position: relative;
+  .container {
+    width: 1450px;
+    height: 660px;
+    margin: 20vh auto 0 auto;
+    > div:first-child.fontBlue {
+      font-size: 36px;
+      height: 80px;
+      font-weight: 600;
+    }
+    > div:nth-child(2) {
+      text-align: center;
+      height: 90px;
+      font-size: 23px;
+      line-height: 40px;
+      letter-spacing: 1px;
+      color: #8d8d8d;
+    }
+    table {
+      text-align: center;
+      margin-top: 90px;
+      width: 100%;
+      table-layout: fixed;
+      tr {
+        td {
+          div.title {
+            height: 70px;
+            line-height: 70px;
+            color: #4c4c4c;
+            font-size: 16px;
+            font-weight: 600;
+          }
+          div.txt {
+            width: 270px;
+            color: #8d8d8d;
+            margin: 0 auto;
+            font-size: 16px;
+            line-height: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+
+//第二部分结束
+//第三部分开始
+.part_three {
+  position: relative;
+  min-height: 800px;
+  background-color: #F6F8FD;
+  .juchi {
+    position: absolute;
+    bottom: -8px;
+  }
+  .container {
+    height: 650px;
+    width: 1670px;
+    float: right;
+    margin-top: 14vh;
+    header.fontBlue {
+      font-size: 38px;
+      margin-top: 10vh;
+      margin-bottom: 35px;
+    }
+    .txtOne {
+      color: #808080;
+      font-size: 24px;
+      line-height: 35px;
+      font-weight: 600;
+    }
+    .txtTwo {
+      color: #808080;
+      margin: 20px 0;
+      font-size: 16px;
+    }
+  }
+}
+
+//旋转方块
+.scrollbox {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 87px;
+  li {
+    width: 210px;
+    height: 210px;
+    transform: rotateZ(45deg);
+    position: absolute;
+    .p1 {
+      transform: rotateZ(-45deg);
+      text-align: center;
+      position: absolute;
+      width: 210px;
+      height: 210px;
+      padding-top: 27px;
+      z-index: 4;
+
+    }
+    .textCenter {
+      color: #8d8d8d;
+      line-height: 22px;
+      transition: all 0.5s;
+    }
+    .sl, .sr, .p2 {
+      width: 210px;
+      height: 210px;
+      position: absolute;
+      background-color: #8FD8F6;
+      z-index: 2;
+      transition: all 0.5s;
+    }
+    .p2 {
+      z-index: 3 !important;
+      background-color: #fff;
+    }
+  }
+  li.active {
+    background-color: #00AAEE;
+    .textCenter {
+      color: #fff
+    }
+    .p2 {
+      background-color: #00AAEE;
+    }
+    .sl {
+      transform: rotateZ(-15deg);
+    }
+    .sr {
+      transform: rotateZ(15deg);
+    }
+  }
+}
+
+//通过按钮
+.baseBtn {
+  width: 180px;
+  height: 60px;
+  cursor: pointer;
+  border: 1px solid #00AAEE;
+  border-radius: 2px 2px 0 0;
+  border-bottom-width: 3px;
+  text-align: center;
+  line-height: 60px;
+  font-size: 16px;
+  overflow: hidden;
+  > div:first-child {
+    z-index: 2;
+    width: 180px;
+    height: 60px;
+    color: #66C7F3;
+    background-color: #fff;
+    overflow: hidden;
+    transition: all 0.5s;
+  }
+  > div:last-child {
+    z-index: 1;
+    width: 180px;
+    color: #fff;
+    background-color: #00AAEE;
+  }
+}
+
+.baseBtn:hover {
+  > div:first-child {
+    height: 0;
+  }
+}
+
+//第三部分结束
+
+//第四部分开始
+.part_four {
+  position: relative;
+  .san {
+    position: absolute;
+    transition: all 0.5s;
+  }
+  .san_r-d, .san_l-d {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .san_l:hover {
+    margin-left: -30px;
+  }
+  .san_r:hover {
+    margin-right: -30px;
+  }
+}
+
+.simgContainer {
+  width: e("calc(100% - 660px)");
+  height: 70%;
+  position: absolute;
+  top: 20vh;
+  left: 330px;
+  img {
+    position: absolute;
+    transition: all 1s;
+    box-shadow: 0 0 30px #606069;
+    cursor: pointer;
+  }
+  img:hover {
+    box-shadow: 0 0 50px #4c4c55;
+  }
+  .simg1 {
+    max-width: 45%;
+    z-index: 3;
+    left: 27.5%;
+    top: 19%;
+    transform: scale(1.5);
+  }
+  .simg2, .simg3 {
+    max-width: 45%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .simg2 {
+    left: 0;
+  }
+  .simg3 {
+    left: 55%;
+  }
+}
+
+//第四部分结束
+
+//第五部分开始
+.part_five {
+  background-color: #F6F8FD;
+  > div.fr {
+    width: 40%;
+    > div:first-child {
+      margin-top: 30vh;
+      color: #00AAEE;
+      font-size: 50px;
+    }
+    > div:nth-child(2) {
+      color: #808080;
+      font-size: 24px;
+      line-height: 35px;
+      font-weight: 600;
+      margin-top: 35px;
+    }
+    > div:nth-child(3) {
+      color: #808080;
+      margin: 20px 0 50px 0;
+      font-size: 16px;
+
+    }
+  }
+}
+
+.tralslateYContainer {
+  float: left;
+  width: 40%;
+  height: 80vh;
+  margin-top: 12.5vh;
+  margin-left: 10%;
+  perspective: 1000px;
+  #imgBody, .layer_1, .layer_2 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-origin: bottom;
+    background-size: contain;
+    transform: rotateX(30deg);
+    box-shadow: 0 0 50px #4c4c55;
+    transition: all 1.5s;
+  }
+  #imgBody {
+    background: url('../img/translate.png');
+    bottom: 0;
+    z-index: 3;
+  }
+  .layer_1, .layer_2 {
+    height: 80%;
+    background-color: #FBFEFE;
+  }
+  .layer_1 {
+    left: -115px;
+    bottom: -30px;
+    z-index: 2;
+  }
+  .layer_2 {
+    right: -115px;
+    bottom: -60px;
+    z-index: 1;
+  }
+}
+
+.tralslateYContainer:hover {
+  #imgBody, .layer_1, .layer_2 {
+    transform: rotateX(0deg);
+    box-shadow: 0 0 20px #6f6f7a
+  }
+  .layer_1, .layer_2 {
+    height: 100%;
+  }
+  .layer_1 {
+    left: 0;
+    bottom: 0;
+  }
+  .layer_2 {
+    right: 0;
+    bottom: 0;
+  }
+}
+
+//第五部分结束
+
+//第六部分开始
+.part_six {
+  > div:first-child {
+    height: 200px;
+    line-height: 286px;
+  }
+  .panter {
+    width: 80%;
+    margin: 0 auto;
+    table-layout: fixed;
+    tbody {
+      tr {
+        td {
+          position: relative;
+          cursor: pointer;
+          .imgBody {
+            width: 100%;
+            height: 20vh;
+            background-size: cover !important;
+          }
+          padding: 10px;
+          .L, .T, .R, .B {
+            background-color: #00AAEE;
+            position: absolute;
+            width: 0;
+            height: 0;
+          }
+          .L {
+            left: 10px;
+            bottom: 10px;
+            transition: height 0.15s linear 0s;
+          }
+          .T {
+            left: 10px;
+            top: 10px;
+            transition: width 0.15s linear 0.15s;
+          }
+          .R {
+            right: 10px;
+            top: 10px;
+            transition: height 0.15s linear 0.3s;
+          }
+          .B {
+            right: 10px;
+            bottom: 10px;
+            transition: width 0.15s linear 0.45s;
+          }
+        }
+        td:hover {
+          .L, .R {
+            height: e('calc(100% - 20px)');
+            width: 2px;
+          }
+          .T, .B {
+            width: e('calc(100% - 20px)');
+            height: 2px;
+          }
+        }
+      }
+    }
+  }
+}
+
+//第六部分结束
+
+//第七部分开始
+.part_seven {
+  background-color: #1A1A1A;
+  .jionus {
+    position: relative;
+    img {
+      max-width: 100%;
+    }
+    h1 {
+      text-align: center;
+      position: absolute;
+      top: 10vh;
+      width: 100%;
+      font-weight: 600;
+      font-size: 60px;
+    }
+    .jionBtn {
+      background-color: #E03A39;
+      color: #fff;
+      width: 180px;
+      height: 60px;
+      text-align: center;
+      line-height: 60px;
+      font-size: 21px;
+      position: absolute;
+      top: 30vh;
+      margin-left: -90px;
+      left: 50%;
+    }
+  }
+  > table {
+    color: #fff;
+    margin: 5vh 0 0 18vw;
+    tbody {
+      tr {
+        td:first-child {
+         width: 150px;
+        }
+        td {
+          padding: 10px;
+          font-weight: 600;
+          font-size: 14px;
+          letter-spacing: 1px;
+        }
+      }
+    }
+  }
+  footer {
+    color: #717171;
+    position: absolute;
+    bottom: 0;
+    height: 80px;
+    border-top: 1px solid #404040;
+    width: 100%;
+    padding-top: 10px;
+    div {
+      height: 30px;
+      line-height: 30px;
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+  }
+}
+
+//第七部分结束
+.scroll-content{
+  transition: all 0.5s;
+}
